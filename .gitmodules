@@ -1,0 +1,3 @@
+[submodule "deps/c3d"]
+	path = deps/c3d
+	url = https://github.com/pyushkevich/c3d.git
