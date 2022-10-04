@@ -12,7 +12,7 @@ build_number=$1
 # conda install conda-build conda-verify
 
 sed -i "s/  name:.*/  name: `grep ^package= scripts/builddeb.sh | cut -d= -f2 | tr -d '"'`/g" meta.yaml
-sed -i "s/  version:.*/  version: `grep ^version= scripts/builddeb.sh | cut -d= -f2 | tr -d '"'`_git`git log --oneline | wc -l | tr -d ' '`/g" meta.yaml
+sed -i "s/  version:.*/  version: `grep ^version= scripts/builddeb.sh | cut -d= -f2 | tr -d '"'`_github`git log --oneline | wc -l | tr -d ' '`/g" meta.yaml
 sed -i "s/  number:.*/  number: ${build_number}/g" meta.yaml
 sed -i "s/  path:.*/  path: output\/debian/g" meta.yaml
 
