@@ -18,7 +18,7 @@ cp $outputdir/install/bin/* $deb_root/usr/bin
 cp $outputdir/build/c3d_affine_tool $deb_root/usr/bin
 
 package="convert3d"
-version="1.0.0"
+version="1.4.0"
 maintainer="pyushkevich/c3d <https://github.com/pyushkevich/c3d/issues>"
 arch="amd64"
 depends="libstdc++6, zlib1g"

@@ -20,7 +20,7 @@ cp $outputdir/install/bin/c4d $deb_root/usr/bin/c4d_wlt
 cp $outputdir/build/c3d_affine_tool $deb_root/usr/bin/c3d_affine_tool_wlt
 
 package="convert3d-with-low-tolerance"
-version="1.0.0"
+version="1.4.0"
 maintainer="pyushkevich/c3d <https://github.com/pyushkevich/c3d/issues>"
 arch="amd64"
 depends="libstdc++6, zlib1g"
