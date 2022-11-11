@@ -34,6 +34,7 @@ cmake $cwd/deps/c3d/ \
 -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_C_COMPILER=/usr/bin/gcc-4.8 \
 -DCMAKE_CXX_COMPILER=/usr/bin/g++-4.8 \
+-DCMAKE_EXE_LINKER_FLAGS="-static" \
 -DITK_DIR=$cwd/$itk_dir/build
 
 n=`nproc`
