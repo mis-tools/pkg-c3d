@@ -73,7 +73,7 @@ EOF
 
 echo "Creating .deb file: $packagefile"
 rm -f ${package}_*.deb
-fakeroot dpkg-deb --build $deb_root $packagefile
+fakeroot dpkg-deb -Zxz --build $deb_root $packagefile
 
 echo "Package info"
 dpkg -I $packagefile
