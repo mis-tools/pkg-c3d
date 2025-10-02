@@ -9,9 +9,21 @@ if [[ "$old_method" == true ]]; then
     # use a hardcoded version of itk, downloaded
     # as a tar ball and compiled from source
     #itk_version="4.5.0"
-    itk_version="4.7.2"
-    #itk_version=4.8.2
-    #itk_version=5.2.1
+    itk_version="4.7.2" # build using ubuntu 14.04 (18.04 does not work)
+    #itk_version="4.8.2"
+    #itk_version="4.9.1"
+    #itk_version="4.10.1"
+    #itk_version="4.11.1"
+    #itk_version="4.12.2"
+    #itk_version="4.13.2" # build using ubuntu 14.04
+
+    #itk_version="5.0.0" # build using ubuntu 14.04 and 18.04
+    #itk_version="5.0.1" # build using ubuntu 18.04
+    #itk_version="5.1.0"
+    #itk_version="5.1.2" # build on master without patching (using ubuntu 14.04)
+    #itk_version="5.2.1" # build using ubuntu 14.04 and 18.04
+
+    #itk_version="5.4.4" # build using ubuntu 18.04 (14.04 does not work, needs CXX17)
     itk_dir_prefix="InsightToolkit"
     outputdir=$2
     source ${script_dir}/dwn_itk.sh $itk_dir_prefix $itk_version $outputdir

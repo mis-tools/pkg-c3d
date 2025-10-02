@@ -1,4 +1,5 @@
 FROM ubuntu:14.04
+# use 18.04 to enable CXX17
 RUN apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y git fakeroot make g++ zlib1g-dev wget
 
 RUN set -x \
