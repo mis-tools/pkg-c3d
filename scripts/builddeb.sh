@@ -55,7 +55,10 @@ if [ ! -z ${BUILD_NUMBER} ]; then
     description="$description, build number=${BUILD_NUMBER}"
 fi
 
-installedsize=`du -s $deb_root | awk '{print $1}'`
+# calculate installedsize before creating DEBIAN subdir as this
+# is meta data that is not installed on the final system
+sync  # if sync is not run the `du -s` gives wrong output
+installedsize=`du -s ${deb_root}/ | awk '{print $1}'`
 
 mkdir -p $deb_root/DEBIAN/
 #for format see: https://www.debian.org/doc/debian-policy/ch-controlfields.html
